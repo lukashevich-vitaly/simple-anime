@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: white;
+}
+
+.wrap {
+    position: relative;
+    width: 700px;
+    height: 700px;
+    background: black;
+}
+.anime {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: coral;
+    animation: move 6s infinite linear ;
+}
+@keyframes move {
+    0% {
+        top: 20px;
+        left: 20px;
+        background: white;
+    }
+    25% {
+        top: 20px;
+        left: calc(100% - 120px);
+        border-radius: 50%;
+        background: burlywood;
+    }
+    50% {
+        top: calc(100% - 120px);
+        left: calc(100% - 120px);
+        border-radius: 0;
+        background: honeydew;
+    }
+    75% {
+        top: calc(100% - 120px);
+        left: 20px;
+        border-radius: 50%;
+        background: yellowgreen;
+    }
+    100% {
+        top: 20px;
+        left: 20px;
+        transform: rotate(720deg);
+        background: thistle;
+    }  
+}
